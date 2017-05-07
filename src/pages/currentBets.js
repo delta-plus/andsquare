@@ -2,7 +2,6 @@
 import React, { Component } from 'react';
 import {
   AppRegistry,
-  StyleSheet,
   Text,
   View,
   Image,
@@ -18,7 +17,7 @@ import makeHash from '../components/makeHash.js';
 import styles from '../styles/common-styles.js';
 import Firebase from '../components/firebase.js';
 
-export default class viewBets extends Component {
+export default class currentBets extends Component {
 
   constructor(props){
     super(props);
@@ -76,6 +75,8 @@ export default class viewBets extends Component {
         return false;
       }
     });
+
+    this.state.userDB.off();
   }
 
   display(ID) {
@@ -178,4 +179,4 @@ export default class viewBets extends Component {
 
 }
 
-AppRegistry.registerComponent('viewBets', () => viewBets);
+AppRegistry.registerComponent('currentBets', () => currentBets);

@@ -2,7 +2,6 @@
 import React, { Component } from 'react';
 import {
   AppRegistry,
-  StyleSheet,
   Text,
   View,
   Image,
@@ -76,6 +75,8 @@ export default class viewBets extends Component {
         return false;
       }
     });
+
+    this.state.userDB.off();
   }
 
   display(ID) {
